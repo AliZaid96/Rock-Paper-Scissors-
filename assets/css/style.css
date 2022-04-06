@@ -26,3 +26,12 @@ body {
 .mechanic:hover {
     transform: scale(1.1);
 }
+
+.score-area {
+    margin-top:2rem ;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
