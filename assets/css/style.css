@@ -1,5 +1,28 @@
-.btn {
-    width: 32%;
-    height: 60px;
-    color: white;
+body {
+    background-color: lightgrey;
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.mechanics {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mechanic {
+    display: inline-block;
+    border: 4px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: aliceblue;
+    transition: 50ms;
+}
+
+.mechanic:hover {
+    transform: scale(1.1);
 }
