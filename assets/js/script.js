@@ -25,10 +25,10 @@ function compRandom() {
 
 // checking the winner function
 function checkWinner(userChoice, computerChoice) {
-    let result = document.getElementById('result');
+    const result = document.getElementById('result');
     
     if (userChoice === computerChoice) {
-        result.innerHTML = 'Both selected' + userChoice + '.It is a tie!'
+        result.innerHTML = 'Both selected ' + userChoice + '. It is a tie!'
     } else if (userChoice === 'rock') {
         if (computerChoice === 'scissors'){
             result.innerHTML = 'Rock beats Scissors, you WIN!';
@@ -54,4 +54,7 @@ function checkWinner(userChoice, computerChoice) {
             compScore++;
         }
     }
+
+    document.getElementById('result-user').innerHTML = userScore.toString();
+    document.getElementById('result-comp').innerHTML = compScore.toString();
 }
