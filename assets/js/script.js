@@ -24,6 +24,34 @@ function compRandom() {
 
 
 // checking the winner function
-function checkWinner(userScore, compScore) {
+function checkWinner(userChoice, computerChoice) {
+    let result = document.getElementById('result');
     
+    if (userChoice === computerChoice) {
+        result.innerHTML = 'Both selected' + userChoice + '.It is a tie!'
+    } else if (userChoice === 'rock') {
+        if (computerChoice === 'scissors'){
+            result.innerHTML = 'Rock beats Scissors, you WIN!';
+            userScore++;
+        } else {
+            result.innerHTML = 'Unlucky, paper beats rock. You lose!';
+            compScore++;
+        }
+    } else if (userChoice === 'paper'){
+        if (computerChoice === 'rock'){
+            result.innerHTML = 'Paper beats rock, you WIN!';
+            userScore++;
+        } else {
+            result.innerHTML = 'Scissors cuts paper, you lose!';
+            compScore++;
+        }
+    } else if (userChoice === 'scissors'){
+        if (computerChoice === 'paper'){
+            result.innerHTML = 'Scissors cuts the paper, You WIN!';
+            userScore++;
+        } else {
+            result.innerHTML = 'Rock beats scissors. You lose!';
+            compScore++;
+        }
+    }
 }
